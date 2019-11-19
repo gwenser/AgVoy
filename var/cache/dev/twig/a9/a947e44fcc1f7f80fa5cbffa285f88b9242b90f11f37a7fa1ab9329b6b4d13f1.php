@@ -71,48 +71,60 @@ class __TwigTemplate_a7517c8883ddfbc6fe968a5b4eb8c604dfe7e904aa35d7a692f02dd784c
     <table class=\"table\">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>";
-        // line 12
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["region"] ?? null), "id", [], "any", false, false, false, 12), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
                 <th>Name</th>
                 <td>";
-        // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["region"] ?? null), "name", [], "any", false, false, false, 16), "html", null, true);
+        // line 12
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["region"] ?? null), "name", [], "any", false, false, false, 12), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Presentation</th>
                 <td>";
-        // line 20
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["region"] ?? null), "presentation", [], "any", false, false, false, 20), "html", null, true);
+        // line 16
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["region"] ?? null), "presentation", [], "any", false, false, false, 16), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Country</th>
                 <td>";
-        // line 24
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["region"] ?? null), "country", [], "any", false, false, false, 24), "html", null, true);
+        // line 20
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["region"] ?? null), "country", [], "any", false, false, false, 20), "html", null, true);
         echo "</td>
+            </tr>
+            <tr>
+                <th>Rooms</th>
+                <td>";
+        // line 24
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["region"] ?? null), "rooms", [], "any", false, false, false, 24));
+        foreach ($context['_seq'] as $context["_key"] => $context["room"]) {
+            // line 25
+            echo "                        ";
+            echo twig_escape_filter($this->env, $context["room"], "html", null, true);
+            echo "
+                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['room'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 27
+        echo "                </td>
             </tr>
         </tbody>
     </table>
 
     <a href=\"";
-        // line 29
+        // line 32
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("region_index");
         echo "\">back to list</a>
 
     <a href=\"";
-        // line 31
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("region_edit", ["id" => twig_get_attribute($this->env, $this->source, ($context["region"] ?? null), "id", [], "any", false, false, false, 31)]), "html", null, true);
+        // line 34
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("region_edit", ["id" => twig_get_attribute($this->env, $this->source, ($context["region"] ?? null), "id", [], "any", false, false, false, 34)]), "html", null, true);
         echo "\">edit</a>
 
     ";
-        // line 33
+        // line 36
         echo twig_include($this->env, $context, "region/_delete_form.html.twig");
         echo "
 ";
@@ -131,7 +143,7 @@ class __TwigTemplate_a7517c8883ddfbc6fe968a5b4eb8c604dfe7e904aa35d7a692f02dd784c
 
     public function getDebugInfo()
     {
-        return array (  116 => 33,  111 => 31,  106 => 29,  98 => 24,  91 => 20,  84 => 16,  77 => 12,  69 => 6,  50 => 5,  44 => 1,);
+        return array (  128 => 36,  123 => 34,  118 => 32,  111 => 27,  102 => 25,  98 => 24,  91 => 20,  84 => 16,  77 => 12,  69 => 6,  50 => 5,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -146,10 +158,6 @@ class __TwigTemplate_a7517c8883ddfbc6fe968a5b4eb8c604dfe7e904aa35d7a692f02dd784c
     <table class=\"table\">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ region.id }}</td>
-            </tr>
-            <tr>
                 <th>Name</th>
                 <td>{{ region.name }}</td>
             </tr>
@@ -160,6 +168,13 @@ class __TwigTemplate_a7517c8883ddfbc6fe968a5b4eb8c604dfe7e904aa35d7a692f02dd784c
             <tr>
                 <th>Country</th>
                 <td>{{ region.country }}</td>
+            </tr>
+            <tr>
+                <th>Rooms</th>
+                <td>{% for room in region.rooms %}
+                        {{ room }}
+                    {% endfor %}
+                </td>
             </tr>
         </tbody>
     </table>

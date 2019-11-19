@@ -49,7 +49,8 @@ class Room
     private $address;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Region", inversedBy="rooms")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Region", inversedBy="rooms")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $region;
 
@@ -76,7 +77,6 @@ class Room
 
     public function __construct()
     {
-        $this->region = new ArrayCollection();
         $this->unavailablePeriods = new ArrayCollection();
         $this->reservations = new ArrayCollection();
         $this->comments = new ArrayCollection();
@@ -159,28 +159,14 @@ class Room
         return $this;
     }
 
-    /**
-     * @return Collection|Region[]
-     */
-    public function getRegion(): Collection
+    public function getRegion(): ?Region
     {
         return $this->region;
     }
 
-    public function addRegion(Region $region): self
+    public function setRegion(?Region $region): self
     {
-        if (!$this->region->contains($region)) {
-            $this->region[] = $region;
-        }
-
-        return $this;
-    }
-
-    public function removeRegion(Region $region): self
-    {
-        if ($this->region->contains($region)) {
-            $this->region->removeElement($region);
-        }
+        $this->region = $region;
 
         return $this;
     }

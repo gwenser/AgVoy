@@ -34,7 +34,7 @@ class Region
     private $country;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Room", mappedBy="region")
+     * @ORM\OneToMany(targetEntity="App\Entity\Room", mappedBy="region")
      */
     private $rooms;
 

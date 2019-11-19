@@ -71,52 +71,52 @@ class __TwigTemplate_365e05f7f954b3df66301363514f0c0236cae8eb9a9c4e2985b03f3b25b
     <table class=\"table\">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>";
-        // line 12
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "id", [], "any", false, false, false, 12), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
                 <th>Summary</th>
                 <td>";
-        // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "summary", [], "any", false, false, false, 16), "html", null, true);
+        // line 12
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "summary", [], "any", false, false, false, 12), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>";
-        // line 20
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "description", [], "any", false, false, false, 20), "html", null, true);
+        // line 16
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "description", [], "any", false, false, false, 16), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Capacity</th>
                 <td>";
-        // line 24
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "capacity", [], "any", false, false, false, 24), "html", null, true);
+        // line 20
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "capacity", [], "any", false, false, false, 20), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Superficy</th>
                 <td>";
-        // line 28
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "superficy", [], "any", false, false, false, 28), "html", null, true);
+        // line 24
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "superficy", [], "any", false, false, false, 24), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Price</th>
                 <td>";
-        // line 32
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "price", [], "any", false, false, false, 32), "html", null, true);
+        // line 28
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "price", [], "any", false, false, false, 28), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Address</th>
                 <td>";
+        // line 32
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "address", [], "any", false, false, false, 32), "html", null, true);
+        echo "</td>
+            </tr>
+            <tr>
+                <th>Region</th>
+                <td>";
         // line 36
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "address", [], "any", false, false, false, 36), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "region", [], "any", false, false, false, 36), "html", null, true);
         echo "</td>
             </tr>
         </tbody>
@@ -167,10 +167,6 @@ class __TwigTemplate_365e05f7f954b3df66301363514f0c0236cae8eb9a9c4e2985b03f3b25b
     <table class=\"table\">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ room.id }}</td>
-            </tr>
-            <tr>
                 <th>Summary</th>
                 <td>{{ room.summary }}</td>
             </tr>
@@ -193,6 +189,10 @@ class __TwigTemplate_365e05f7f954b3df66301363514f0c0236cae8eb9a9c4e2985b03f3b25b
             <tr>
                 <th>Address</th>
                 <td>{{ room.address }}</td>
+            </tr>
+            <tr>
+                <th>Region</th>
+                <td>{{ room.region }}</td>
             </tr>
         </tbody>
     </table>

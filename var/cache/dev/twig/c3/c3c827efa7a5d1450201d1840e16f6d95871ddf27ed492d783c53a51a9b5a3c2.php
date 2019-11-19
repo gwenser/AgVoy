@@ -71,7 +71,6 @@ class __TwigTemplate_a1222d57c61fefb1c1b7a939094882e59f5360117b20ab8d3a5088c9131
     <table class=\"table\">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Summary</th>
                 <th>Description</th>
                 <th>Capacity</th>
@@ -83,49 +82,45 @@ class __TwigTemplate_a1222d57c61fefb1c1b7a939094882e59f5360117b20ab8d3a5088c9131
         </thead>
         <tbody>
         ";
-        // line 22
+        // line 21
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["rooms"] ?? null));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["room"]) {
-            // line 23
+            // line 22
             echo "            <tr>
                 <td>";
+            // line 23
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["room"], "summary", [], "any", false, false, false, 23), "html", null, true);
+            echo "</td>
+                <td>";
             // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["room"], "id", [], "any", false, false, false, 24), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["room"], "description", [], "any", false, false, false, 24), "html", null, true);
             echo "</td>
                 <td>";
             // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["room"], "summary", [], "any", false, false, false, 25), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["room"], "capacity", [], "any", false, false, false, 25), "html", null, true);
             echo "</td>
                 <td>";
             // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["room"], "description", [], "any", false, false, false, 26), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["room"], "superficy", [], "any", false, false, false, 26), "html", null, true);
             echo "</td>
                 <td>";
             // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["room"], "capacity", [], "any", false, false, false, 27), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["room"], "price", [], "any", false, false, false, 27), "html", null, true);
             echo "</td>
                 <td>";
             // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["room"], "superficy", [], "any", false, false, false, 28), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["room"], "price", [], "any", false, false, false, 29), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["room"], "address", [], "any", false, false, false, 30), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["room"], "address", [], "any", false, false, false, 28), "html", null, true);
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 32
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_show", ["id" => twig_get_attribute($this->env, $this->source, $context["room"], "id", [], "any", false, false, false, 32)]), "html", null, true);
+            // line 30
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_show", ["id" => twig_get_attribute($this->env, $this->source, $context["room"], "id", [], "any", false, false, false, 30)]), "html", null, true);
             echo "\">show</a>
                     <a href=\"";
-            // line 33
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["room"], "id", [], "any", false, false, false, 33)]), "html", null, true);
+            // line 31
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["room"], "id", [], "any", false, false, false, 31)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -133,7 +128,7 @@ class __TwigTemplate_a1222d57c61fefb1c1b7a939094882e59f5360117b20ab8d3a5088c9131
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 37
+            // line 35
             echo "            <tr>
                 <td colspan=\"8\">no records found</td>
             </tr>
@@ -142,12 +137,12 @@ class __TwigTemplate_a1222d57c61fefb1c1b7a939094882e59f5360117b20ab8d3a5088c9131
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['room'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 41
+        // line 39
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 44
+        // line 42
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_new");
         echo "\">Create new</a>
 ";
@@ -166,7 +161,7 @@ class __TwigTemplate_a1222d57c61fefb1c1b7a939094882e59f5360117b20ab8d3a5088c9131
 
     public function getDebugInfo()
     {
-        return array (  151 => 44,  146 => 41,  137 => 37,  128 => 33,  124 => 32,  119 => 30,  115 => 29,  111 => 28,  107 => 27,  103 => 26,  99 => 25,  95 => 24,  92 => 23,  87 => 22,  69 => 6,  50 => 5,  44 => 1,);
+        return array (  146 => 42,  141 => 39,  132 => 35,  123 => 31,  119 => 30,  114 => 28,  110 => 27,  106 => 26,  102 => 25,  98 => 24,  94 => 23,  91 => 22,  86 => 21,  69 => 6,  50 => 5,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -181,7 +176,6 @@ class __TwigTemplate_a1222d57c61fefb1c1b7a939094882e59f5360117b20ab8d3a5088c9131
     <table class=\"table\">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Summary</th>
                 <th>Description</th>
                 <th>Capacity</th>
@@ -194,7 +188,6 @@ class __TwigTemplate_a1222d57c61fefb1c1b7a939094882e59f5360117b20ab8d3a5088c9131
         <tbody>
         {% for room in rooms %}
             <tr>
-                <td>{{ room.id }}</td>
                 <td>{{ room.summary }}</td>
                 <td>{{ room.description }}</td>
                 <td>{{ room.capacity }}</td>

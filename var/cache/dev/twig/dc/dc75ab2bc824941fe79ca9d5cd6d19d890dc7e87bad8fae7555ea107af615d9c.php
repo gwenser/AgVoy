@@ -71,55 +71,48 @@ class __TwigTemplate_922a2815017cce619beed51db078c04ab1ece598964f612badb66460cc9
     <table class=\"table\">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>";
-        // line 12
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["owner"] ?? null), "id", [], "any", false, false, false, 12), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
                 <th>Firstname</th>
                 <td>";
-        // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["owner"] ?? null), "firstname", [], "any", false, false, false, 16), "html", null, true);
+        // line 12
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["owner"] ?? null), "firstname", [], "any", false, false, false, 12), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>FamilyName</th>
                 <td>";
-        // line 20
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["owner"] ?? null), "familyName", [], "any", false, false, false, 20), "html", null, true);
+        // line 16
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["owner"] ?? null), "familyName", [], "any", false, false, false, 16), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Address</th>
                 <td>";
-        // line 24
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["owner"] ?? null), "address", [], "any", false, false, false, 24), "html", null, true);
+        // line 20
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["owner"] ?? null), "address", [], "any", false, false, false, 20), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Country</th>
                 <td>";
-        // line 28
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["owner"] ?? null), "country", [], "any", false, false, false, 28), "html", null, true);
+        // line 24
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["owner"] ?? null), "country", [], "any", false, false, false, 24), "html", null, true);
         echo "</td>
             </tr>
         </tbody>
     </table>
 
     <a href=\"";
-        // line 33
+        // line 29
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("owner_index");
         echo "\">back to list</a>
 
     <a href=\"";
-        // line 35
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("owner_edit", ["id" => twig_get_attribute($this->env, $this->source, ($context["owner"] ?? null), "id", [], "any", false, false, false, 35)]), "html", null, true);
+        // line 31
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("owner_edit", ["id" => twig_get_attribute($this->env, $this->source, ($context["owner"] ?? null), "id", [], "any", false, false, false, 31)]), "html", null, true);
         echo "\">edit</a>
 
     ";
-        // line 37
+        // line 33
         echo twig_include($this->env, $context, "owner/_delete_form.html.twig");
         echo "
 ";
@@ -138,7 +131,7 @@ class __TwigTemplate_922a2815017cce619beed51db078c04ab1ece598964f612badb66460cc9
 
     public function getDebugInfo()
     {
-        return array (  123 => 37,  118 => 35,  113 => 33,  105 => 28,  98 => 24,  91 => 20,  84 => 16,  77 => 12,  69 => 6,  50 => 5,  44 => 1,);
+        return array (  116 => 33,  111 => 31,  106 => 29,  98 => 24,  91 => 20,  84 => 16,  77 => 12,  69 => 6,  50 => 5,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -152,10 +145,6 @@ class __TwigTemplate_922a2815017cce619beed51db078c04ab1ece598964f612badb66460cc9
 
     <table class=\"table\">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ owner.id }}</td>
-            </tr>
             <tr>
                 <th>Firstname</th>
                 <td>{{ owner.firstname }}</td>

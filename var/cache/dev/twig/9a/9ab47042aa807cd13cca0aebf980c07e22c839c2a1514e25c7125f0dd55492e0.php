@@ -71,7 +71,6 @@ class __TwigTemplate_e77597ff5999de8e2c33f7441e734c76c40307a5b8093fe5c85f75ec7a4
     <table class=\"table\">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Name</th>
                 <th>Presentation</th>
                 <th>Country</th>
@@ -80,37 +79,33 @@ class __TwigTemplate_e77597ff5999de8e2c33f7441e734c76c40307a5b8093fe5c85f75ec7a4
         </thead>
         <tbody>
         ";
-        // line 19
+        // line 18
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["regions"] ?? null));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["region"]) {
-            // line 20
+            // line 19
             echo "            <tr>
                 <td>";
+            // line 20
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["region"], "name", [], "any", false, false, false, 20), "html", null, true);
+            echo "</td>
+                <td>";
             // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["region"], "id", [], "any", false, false, false, 21), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["region"], "presentation", [], "any", false, false, false, 21), "html", null, true);
             echo "</td>
                 <td>";
             // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["region"], "name", [], "any", false, false, false, 22), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["region"], "presentation", [], "any", false, false, false, 23), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["region"], "country", [], "any", false, false, false, 24), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["region"], "country", [], "any", false, false, false, 22), "html", null, true);
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 26
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("region_show", ["id" => twig_get_attribute($this->env, $this->source, $context["region"], "id", [], "any", false, false, false, 26)]), "html", null, true);
+            // line 24
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("region_show", ["id" => twig_get_attribute($this->env, $this->source, $context["region"], "id", [], "any", false, false, false, 24)]), "html", null, true);
             echo "\">show</a>
                     <a href=\"";
-            // line 27
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("region_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["region"], "id", [], "any", false, false, false, 27)]), "html", null, true);
+            // line 25
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("region_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["region"], "id", [], "any", false, false, false, 25)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -118,7 +113,7 @@ class __TwigTemplate_e77597ff5999de8e2c33f7441e734c76c40307a5b8093fe5c85f75ec7a4
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 31
+            // line 29
             echo "            <tr>
                 <td colspan=\"5\">no records found</td>
             </tr>
@@ -127,12 +122,12 @@ class __TwigTemplate_e77597ff5999de8e2c33f7441e734c76c40307a5b8093fe5c85f75ec7a4
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['region'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 35
+        // line 33
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 38
+        // line 36
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("region_new");
         echo "\">Create new</a>
 ";
@@ -151,7 +146,7 @@ class __TwigTemplate_e77597ff5999de8e2c33f7441e734c76c40307a5b8093fe5c85f75ec7a4
 
     public function getDebugInfo()
     {
-        return array (  136 => 38,  131 => 35,  122 => 31,  113 => 27,  109 => 26,  104 => 24,  100 => 23,  96 => 22,  92 => 21,  89 => 20,  84 => 19,  69 => 6,  50 => 5,  44 => 1,);
+        return array (  131 => 36,  126 => 33,  117 => 29,  108 => 25,  104 => 24,  99 => 22,  95 => 21,  91 => 20,  88 => 19,  83 => 18,  69 => 6,  50 => 5,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -166,7 +161,6 @@ class __TwigTemplate_e77597ff5999de8e2c33f7441e734c76c40307a5b8093fe5c85f75ec7a4
     <table class=\"table\">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Name</th>
                 <th>Presentation</th>
                 <th>Country</th>
@@ -176,7 +170,6 @@ class __TwigTemplate_e77597ff5999de8e2c33f7441e734c76c40307a5b8093fe5c85f75ec7a4
         <tbody>
         {% for region in regions %}
             <tr>
-                <td>{{ region.id }}</td>
                 <td>{{ region.name }}</td>
                 <td>{{ region.presentation }}</td>
                 <td>{{ region.country }}</td>

@@ -4,16 +4,16 @@ namespace Symfony\Component\VarExporter\Internal;
 
 return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
     $o = [
-        clone (Registry::$prototypes['Doctrine\\ORM\\Mapping\\ManyToMany'] ?? Registry::p('Doctrine\\ORM\\Mapping\\ManyToMany')),
+        clone (Registry::$prototypes['Doctrine\\ORM\\Mapping\\OneToMany'] ?? Registry::p('Doctrine\\ORM\\Mapping\\OneToMany')),
     ],
     null,
     [
         'stdClass' => [
-            'targetEntity' => [
-                'App\\Entity\\Room',
-            ],
             'mappedBy' => [
                 'region',
+            ],
+            'targetEntity' => [
+                'App\\Entity\\Room',
             ],
         ],
     ],
