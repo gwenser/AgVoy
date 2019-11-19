@@ -1,6 +1,6 @@
 <?php
 
-namespace ContainerSvucVCh;
+namespace ContainerReTzXje;
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -56,8 +56,8 @@ class srcApp_KernelDevDebugContainer extends Container
             'App\\Controller\\ClientController' => 'getClientControllerService.php',
             'App\\Controller\\CommentController' => 'getCommentControllerService.php',
             'App\\Controller\\OwnerController' => 'getOwnerControllerService.php',
-            'App\\Controller\\ReservationController' => 'getReservationControllerService.php',
             'App\\Controller\\OwnerRoomController' => 'getOwnerRoomControllerService.php',
+            'App\\Controller\\ReservationController' => 'getReservationControllerService.php',
             'App\\Controller\\UnavailablePeriodController' => 'getUnavailablePeriodControllerService.php',
             'Symfony\\Bundle\\FrameworkBundle\\Controller\\RedirectController' => 'getRedirectControllerService.php',
             'Symfony\\Bundle\\FrameworkBundle\\Controller\\TemplateController' => 'getTemplateControllerService.php',
