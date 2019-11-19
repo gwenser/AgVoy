@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<title>Reservation</title>
+
+{% block body %}
+    <h1>Reservation</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ reservation.id }}</td>
+            </tr>
+            <tr>
+                <th>BeginDate</th>
+                <td>{{ reservation.beginDate ? reservation.beginDate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>EndDate</th>
+                <td>{{ reservation.endDate ? reservation.endDate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Confirmed</th>
+                <td>{{ reservation.confirmed ? 'Yes' : 'No' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('reservation_index') }}">back to list</a>
+
+    <a href="{{ path('reservation_edit', {'id': reservation.id}) }}">edit</a>
+
+    {{ include('reservation/_delete_form.html.twig') }}
+{% endblock %}
